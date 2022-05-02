@@ -1,0 +1,1266 @@
+@charset "utf-8";
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  
+    /* 가로1200박스만 찾아서 100%로 설정한다. */
+    header, .header_top, .header_bottom, .gnb > ul, .free_ex > article, .shop_box, .story article, .instar, .f_nav, .f_info, address{
+      width:100%;
+    }
+  
+    header{
+      height:60px;
+      position:relative;
+    }
+    .header_top h1{
+      width:100%;
+      margin:0px auto;
+      position:static; /*본래성격으로 돌아옴.*/
+      width:129px;
+      padding-top:4px;
+    }
+    .header_top i.fa-solid.fa-user{
+      display: inline;
+    }
+    .fa-user{
+      display:block;
+      color:rgb(252, 252, 252);
+      font-size:1.6rem;
+      position:absolute;
+      right:20px;top:20px;
+    }
+  
+    .header_bottom{
+      left:-100%;
+    }
+  
+    label.fa-bars{
+      display:block;
+      position:absolute;
+      top:9px !important;
+      left:10px !important;
+      color:rgb(252, 252, 252);
+      font-size:1.6rem;
+    }
+  
+    .gnb{
+      width:100%;
+      height:100%;
+      padding:150px 4% 0px 4%;
+      box-sizing: border-box;
+      background-color:rgba(0,0,0,.9);
+      position:fixed;
+      top:0px;
+      left:-100%; /* 숨기기 */
+      z-index:1000;
+      transition:0.5s;
+    }
+    .gnb a{color:#ccc;}
+    .gnb > ul{
+      flex-direction:column;
+    }
+    .gnb > ul > li{
+      border-bottom:1px solid rgb(153, 153, 153);
+    }
+    .gnb > ul > li > a{border:none;}
+    .sub{display:none;}
+  
+    /* 닫기버튼 */
+    label.fa-times{
+      display:inline-block;
+      position:fixed;
+      z-index:1003;
+      left:-60px;
+      top:30px;
+      font-size:2.3rem;
+      color:#fff;
+      padding:10px;
+      cursor:pointer;
+      transition:0.5s;
+    }
+  /* 검색박스 숨기기 */
+    fieldset{
+      position:fixed;
+      width:80%;
+      left:-100%;
+      z-index:1001;
+      transition:0.5s;
+    }
+  
+    .lnb{
+      width:80%;
+      position:fixed;
+      z-index:1001;
+      top:530px;
+      left:-100%; /* 숨기기 */
+      transition:0.5s;
+    }
+    .lnb > ul{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .lnb > ul > li{
+      width:44%;
+      text-align:center;
+      margin:0px 2px 4px 2px;
+      background-color:rgb(112, 112, 112);
+    }
+    .lnb > ul > li a{
+      line-height:40px;
+    }
+    .lan{
+      display: none;
+    }
+    main .slide img{
+      height:600px;
+      object-fit:cover; /* 이미지 높이를 기준으로 보여줌 */
+      /* object-fit:contain; 이미지 가로가 기준 */
+    }
+  
+    /* 햄버거메뉴를 클릭하면 .lnb, fieldset, .gnb 모두 날아오게 하기 */
+    #toggle:checked ~ header > .header_top .lnb{left:0px;}
+    #toggle:checked ~ header > .header_top fieldset{left:20%;}
+    #toggle:checked ~ header > .header_bottom .gnb{left:0px;}
+    #toggle:checked ~ header > .header_bottom .fa-times{left:90%;}
+  
+  
+    /* 슬라이드 */
+    .slide{
+      height: 600px;
+    }
+  
+    /*공통서식*/
+    .content{
+      position: relative;
+      height: 600px;
+    }
+    .button{
+      position: absolute;
+      font-family: 'MaruBuri-Regular';
+      font-size: 8px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      width: fit-content;
+      padding: 5px 5px;
+      border: 1px solid #736565;
+      border-radius: 5px;
+      top:5px;
+      right: 28px;
+  }
+    .button:hover {
+      color: #fff;
+      background-color: #736565;
+      box-sizing: border-box;
+      width: fit-content;
+      display: block;
+      border: 2px solid #736565;
+    }
+    .con_title{
+      font-family: 'MaruBuri-Regular';
+      font-size: 1.750rem;
+      font-weight: 600;
+      margin: 5% auto;
+      text-align: center;
+    }
+    .no_title{
+      display: none;
+    }
+
+  /* 객실안내 */
+    .room-infor{
+      height: 500px;
+    }
+    .r_infor{
+      position: relative;
+      top:0px;
+      height: 510px;
+    }
+    .r_infor .con_title{
+      margin: 6% auto;
+    }
+    .room_slide{
+      width: 100%;
+    }
+    .room{
+      width: 100%;
+    }
+    .room_picture{
+      display: flex;
+      margin-top: -10px;
+      margin-left: 30px;
+    }
+    .room_picture li{
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    .room_picture li img{
+      width: 215px;
+    }
+    .room_text{
+      display: flex;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    .room_text li{
+      width: 330px;
+      margin-right: -68px;
+    }
+    .room_text li img{
+      width:315px;
+    }
+  
+    /* 아날로그 패키지 */
+    .package{
+      height: 320px;
+      margin-top: 50px;
+    }
+    .package .button {
+      right: 30px;
+  }
+    .packge-list{
+      /* background: rebeccapurple; */
+      width:100%;
+      text-align: center;
+      margin: 0% 0%;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: space-around;
+    }
+    .packge-list li{
+      width: 44%;
+      justify-content: space-around;
+      margin-right: 0px;
+    }
+    .packge-list li a{
+      justify-content: center;
+    }
+    .icon{
+      background-image: url(../images/icon_packge.png);
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+  }
+  
+    li:nth-child(2) .icon {
+      background-position: -152px;
+  }
+  
+    li:nth-child(3) .icon {
+      background-position: -313px;
+    }
+  
+    li:last-child .icon {
+      background-position: -468px;
+    }
+    
+    .lnb > ul > li:nth-child(4) > a {
+      display: inline;
+    }
+
+    /* 패키지 공통서식 */
+    .mn_title{
+      font-family: 'MaruBuri-Regular';
+      font-size: 0.938rem;
+      margin-bottom: 0.313rem;
+    }
+    .mn_infor{
+      /* font-family: 'MaruBuri-Regular'; */
+      font-size: 0.7rem;
+    }
+  
+    /* 서비스 영역 */
+    .service > h2{
+      display: none;
+    }
+  
+    /* 서비스 */
+  #about{
+    width:100%;
+    padding:0px 0px 100px 0px;
+    height:560px;
+  }
+  
+  .about_inner{
+    width:100%;
+    color:#333333;
+    display: inline;
+  }
+  .about_txt{
+    width:100%;
+    margin-top:3%;
+    padding-bottom: 60px;
+    text-align: center;
+   
+  }
+  .about_title{
+    font-family: 'MaruBuri-Regular';
+    font-size: 2.25rem;
+    font-weight: 800;
+  }
+  .p01{
+    font-size:24px;
+    font-weight:lighter;
+    line-height:26px;
+    padding:1.25rem 0rem 1.25rem 0rem;
+  }
+  .p02{
+    font-size:14px;
+    line-height:24px;
+  }
+  
+  .about_stay{
+    width: 100%;
+    float: left;
+    padding: 0px 0px 30px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .about_stay dl{
+    text-align: center;
+    height: 335px;
+  }
+  
+  .about_stay dt{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  
+  .about_stay dt::before, .about_stay dt::after{
+    content: "";
+    width: calc(30/375*100%); height: 1px;
+    background-color: #333333;
+    display: block;
+    position: absolute; top: 12px;
+  }
+  .about_stay dt::before{left: 0px;}
+  .about_stay dt::after{right: -16px}
+  
+  .about_stay dd{
+    width: calc(120/375*100%);
+    display: inline-block;/*가로, 세로크기, 여백설정, 글자처럼 정렬도 가능*/
+    text-align: center;
+    
+  }
+  
+  .about_stay dd span{
+    display: block;
+    padding: 6px 0px;
+  }
+  
+  /* 갤러리 */
+  .gallery{
+    height: 480px;
+  }
+  .gallery-box{
+    width: 100%;
+    margin-left: 5px;
+  }
+  .gallery-list{
+    display: flex;
+    width: 760px;
+  }
+  .gallery li{
+    margin-right: 25px;
+    width: 165px;
+    height: calc(468/600*100%);
+  }
+  .gallery li img{
+    width:180px;
+  }
+  /* 푸드검색 */
+  .food{
+    background: #C7BBAF;
+    height: 730px;
+  }
+  .food_title{
+    padding-top: 6%;
+  }
+  .food-search{
+    display: flex;
+    position: relative;
+    width: 315px;
+    width: 100%;
+    height: calc(70/600*100%);
+  }
+  .food-search img{
+    width: calc(24/375*100%);
+    position: absolute;
+    z-index: 1;
+  }
+  .form-control {
+    background-image: url(../images/icon_search.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 20px,50px;
+    position: absolute;
+    transform: translate(50%,50%);
+    top:-30px; right: 50%;
+    text-indent: 50px;
+    height: 60px;
+    width: 315px;
+    font-weight: 800;
+    padding-left: 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #707070;
+    background-color: #ffffff;
+    border: 0px solid transparent;
+  }
+  /* 음식리스트 */
+  .food-box{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .food-list{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 50px;
+    width: 768px;
+    justify-content: center;
+  }
+  .food-list li{
+    width: 200px;
+    margin-right: 50px;
+    margin-top:10px;
+  }
+  .food-list li img {
+    width: 170px;
+  }
+  .f_title{
+    display: inline-block;
+    width: 180px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  /* 유튜브 */
+  .youtube{
+    height: 435px;
+  }
+  .player{
+    padding-top:56.25%;
+    position: relative;
+  }
+  .player iframe{
+    position: absolute;
+    top:10%; left:0;
+    transform: translate(0%,0%);
+    width:100%; height:100%;
+  }
+    /* 인스타그램 */
+    .instar{
+      margin:0 auto;
+    }
+    .instar .con_title img{
+      width: calc(120/375*100%);
+    }
+    .instagram{
+      display: inline-block;
+      width: 100%;
+      margin-top:40px;
+    }
+    .instar .insta_img{
+      width: calc(170/375*100%);
+      float: left;
+      margin-left: 25%;
+      margin-top: -7%;
+    }
+    .insta_id{
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    .instar ul{
+      grid-template-columns:repeat(3, 1fr);
+    }
+    .instar ul li:nth-child(10),.instar ul li:nth-child(11),.instar ul li:nth-child(12){
+      display: none;
+  }
+  
+    /* 푸터영역 */
+    footer{
+      margin-top: 10px;
+      height: 250px;
+    }
+    .f_lnb{
+      position: relative;
+      display: inline-block;
+      left: 6%; top:10px;
+      justify-content: space-around;
+    }
+    .f_lnb li a{
+      color: #313030;
+      font-size: 0.875rem;
+      font-weight: 100;
+    }
+    .f_nav dt{
+      padding-left: calc(16/375*100%);
+    }
+    .f_nav dd{
+      width: 50%;
+    }
+    .f_nav dd a{
+      font-size: 0.76rem;
+    }
+    .f_nav dd span{
+      position: absolute;
+      right: 8%;
+      top:3%;
+      font-size: 0.6rem;
+    }
+    .f_info dl{
+      position: relative;
+      width: 100%;
+    }
+    .f_info > dl > dd:nth-child(2){
+      position: absolute;
+      top: 90px;
+      left: 4%;
+      line-height: 32px;
+    }
+    .f_info > dl > dd:nth-child(3){
+      position: absolute;
+      top: 133px;
+      right: 10%;
+      line-height: 32px;
+    }
+    .f_info > dd {
+      width: 90%;
+      font-size: 1rem;
+      text-align: center;
+      justify-content: space-around;
+    }
+    .f_info > dl dd {
+      position: absolute;
+      top: 85px;
+      left: 4%;
+      line-height: 32px;
+  }
+    .f_info > dl h3{
+      font-size: 0.84rem;
+    }
+    .f_info > dl .number{font-size: 1.3rem;}
+    .f_info > dl p{
+      font-size: 0.8rem;
+      width: 130px;
+    }
+    .sns{
+      position: absolute;
+      top: -10px;
+      left: 25%;
+    }
+    .sns a{
+      color:#313030;
+      font-size:20px;
+    }
+    .f_info > dd > dd{
+      font-size: 12px;
+    }
+    .siteurl{
+      position: absolute;
+      top: 170px;
+      left: 6%;
+      width: 80%;
+    }
+    .siteurl > label{display: none;}
+    address{
+      width: 90%;
+      border-top:1px solid #313030;
+      margin-left: 35px;
+      padding-top:14px;
+      margin-top:10px;
+      font-size:16px;
+      color:#ccc;
+      line-height:24px;
+      }
+      address > .a_info{
+          width:100%;
+          margin-right:0px;
+          padding:1%;
+          clear:left;
+          box-sizing:border-box;
+          font-size:0.8rem;
+          color: #313030;
+      }
+      address > .a_pay{
+          display: none;
+      }
+      .list_app{
+        display: none;
+      }
+      aside{
+        display: none;
+      }
+       /* 예약버튼 */
+    .reservation{
+      position:relative;
+      top:-350px; right:-350px;
+      content: '';
+      z-index: 10;
+      width: 300px;
+      height: 230px;
+      /* background-color: #c466b7; */
+    }
+    .reservation > ul{
+      position: absolute;
+      width:300px;
+      /* right:360px; top:0PX; */
+
+    }
+    .reservation > ul >li{
+      background-color: rgba(51,51,51,0.9);
+      border:none;
+      color:#ffffff;
+      transition:0.5s;
+      text-indent:30px;
+      margin-bottom:10px;
+    }
+    .reservation > ul >li a{
+      color:#ffffff;
+      padding: 5px;
+      line-height:50px;
+      border-bottom: 1px solid #ffffff;
+    }
+    .reservation > ul >li:hover{
+      background-color:#736565;
+      color:#000000;
+    }
+    .reservation > ul >li:nth-child(4):hover{
+      background-color:#CF4747;
+      color:#000000;
+    }
+  }
+
+@media screen and (min-width:1024px) and (max-width:1199px){
+  
+    /* 가로1200박스만 찾아서 100%로 설정한다. */
+    header, .header_top, .header_bottom, .gnb > ul, .free_ex > article, .shop_box, .story article, .instar, .f_nav, .f_info, address{
+      width:100%;
+    }
+  
+    header{
+      height:60px;
+      position:relative;
+    }
+    .header_top h1{
+      width:100%;
+      margin:0px auto;
+      position:static; /*본래성격으로 돌아옴.*/
+      width:129px;
+      padding-top:4px;
+    }
+    .header_top i.fa-solid.fa-user{
+      display: inline;
+    }
+    .fa-user{
+      display:block;
+      color:rgb(252, 252, 252);
+      font-size:1.6rem;
+      position:absolute;
+      right:20px;top:20px;
+    }
+  
+    .header_bottom{
+      left:-100%;
+    }
+  
+    label.fa-bars{
+      display:block;
+      position:absolute;
+      top:9px !important;
+      left:10px !important;
+      color:rgb(252, 252, 252);
+      font-size:1.6rem;
+    }
+  
+    .gnb{
+      width:100%;
+      height:100%;
+      padding:150px 4% 0px 4%;
+      box-sizing: border-box;
+      background-color:rgba(0,0,0,.9);
+      position:fixed;
+      top:0px;
+      left:-100%; /* 숨기기 */
+      z-index:1000;
+      transition:0.5s;
+    }
+    .gnb a{color:#ccc;}
+    .gnb > ul{
+      flex-direction:column;
+    }
+    .gnb > ul > li{
+      border-bottom:1px solid rgb(153, 153, 153);
+    }
+    .gnb > ul > li > a{border:none;}
+    .sub{display:none;}
+  
+    /* 닫기버튼 */
+    label.fa-times{
+      display:inline-block;
+      position:fixed;
+      z-index:1003;
+      left:-60px;
+      top:30px;
+      font-size:2.3rem;
+      color:#fff;
+      padding:10px;
+      cursor:pointer;
+      transition:0.5s;
+    }
+  /* 검색박스 숨기기 */
+    fieldset{
+      position:fixed;
+      width:80%;
+      left:-100%;
+      z-index:1001;
+      transition:0.5s;
+    }
+  
+    .lnb{
+      width:80%;
+      position:fixed;
+      z-index:1001;
+      top:530px;
+      left:-100%; /* 숨기기 */
+      transition:0.5s;
+    }
+    .lnb > ul{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .lnb > ul > li{
+      width:44%;
+      text-align:center;
+      margin:0px 2px 4px 2px;
+      background-color:rgb(112, 112, 112);
+    }
+    .lnb > ul > li a{
+      line-height:40px;
+    }
+    .lnb > ul > li:nth-child(4) > a {
+      display: inline;
+    }
+    .lan{
+      display: none;
+    }
+    main .slide img{
+      height:600px;
+      object-fit:cover; /* 이미지 높이를 기준으로 보여줌 */
+      /* object-fit:contain; 이미지 가로가 기준 */
+    }
+  
+    /* 햄버거메뉴를 클릭하면 .lnb, fieldset, .gnb 모두 날아오게 하기 */
+    #toggle:checked ~ header > .header_top .lnb{left:0px;}
+    #toggle:checked ~ header > .header_top fieldset{left:20%;}
+    #toggle:checked ~ header > .header_bottom .gnb{left:0px;}
+    #toggle:checked ~ header > .header_bottom .fa-times{left:90%;}
+  
+  
+    /* 슬라이드 */
+    .slide{
+      height: 600px;
+    }
+  
+    /*공통서식*/
+    .content{
+      position: relative;
+      height: 600px;
+    }
+    .button{
+      position: absolute;
+      font-family: 'MaruBuri-Regular';
+      font-size: 8px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      width: fit-content;
+      padding: 5px 10px;
+      border: 1px solid #736565;
+      border-radius: 5px;
+      top:5px;
+      right: 28px;
+  }
+    .button:hover {
+      color: #fff;
+      background-color: #736565;
+      box-sizing: border-box;
+      width: fit-content;
+      display: block;
+      border: 2px solid #736565;
+    }
+    .con_title{
+      font-family: 'MaruBuri-Regular';
+      font-size: 1.750rem;
+      font-weight: 600;
+      margin: 5% auto;
+      text-align: center;
+    }
+    .no_title{
+    display: none;
+  }
+  /* 객실안내 */
+    .room-infor{
+      height: 500px;
+    }
+    .r_infor{
+      position: relative;
+      height: 620px;
+      top:0px;
+    }
+    .r_infor .con_title{
+      margin: 6% auto;
+    }
+    .room_slide{
+      width: 100%;
+    }
+    .room{
+      width: 100%;
+    }
+    .room_picture{
+      display: flex;
+      margin-top: -10px;
+      margin-left: 30px;
+    }
+    .room_picture li{
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    .room_picture li img{
+      width: 300px;
+    }
+    .room_text{
+      display: flex;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    .room_text li{
+      width: 330px;
+    }
+    .room_text li img{
+      width:315px;
+    }
+  
+    /* 아날로그 패키지 */
+    .package{
+      height: 320px;
+      margin-top: 170px;
+    }
+    .package .button {
+      right: 45px;
+  }
+    .packge-list{
+      width:100%;
+      text-align: center;
+      margin: 0% 5%;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: space-around;
+    }
+    .packge-list li{
+      width: 44%;
+      justify-content: space-around;
+    }
+    .packge-list li a{
+      justify-content: center;
+    }
+    .icon{
+      background-image: url(../images/icon_packge.png);
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+  }
+  
+    li:nth-child(2) .icon {
+      background-position: -152px;
+  }
+  
+    li:nth-child(3) .icon {
+      background-position: -313px;
+    }
+  
+    li:last-child .icon {
+      background-position: -468px;
+    }
+  
+    /* 패키지 공통서식 */
+    .mn_title{
+      font-family: 'MaruBuri-Regular';
+      font-size: 0.938rem;
+      margin-bottom: 0.313rem;
+    }
+    .mn_infor{
+      /* font-family: 'MaruBuri-Regular'; */
+      font-size: 0.7rem;
+    }
+  
+    /* 서비스 영역 */
+    .service > h2{
+      display: none;
+    }
+  
+    /* 서비스 */
+  #about{
+    width:100%;
+    padding:0px 0px 100px 0px;
+    height:560px;
+  }
+  
+  .about_inner{
+    width:100%;
+    color:#333333;
+    display: inline;
+  }
+  .about_txt{
+    width:100%;
+    margin-top:3%;
+    padding-bottom: 60px;
+    text-align: center;
+   
+  }
+  .about_title{
+    font-family: 'MaruBuri-Regular';
+    font-size: 2.25rem;
+    font-weight: 800;
+  }
+  .p01{
+    font-size:24px;
+    font-weight:lighter;
+    line-height:26px;
+    padding:1.25rem 0rem 1.25rem 0rem;
+  }
+  .p02{
+    font-size:14px;
+    line-height:24px;
+  }
+  
+  .about_stay{
+    width: 100%;
+    /* float: left; */
+    padding: 0px 0px 30px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .about_stay dl{
+    text-align: center;
+    height: 335px;
+  }
+  
+  .about_stay dt{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  
+  .about_stay dt::before, .about_stay dt::after{
+    content: "";
+    width: calc(30/375*100%); height: 1px;
+    background-color: #333333;
+    display: block;
+    position: absolute; top: 12px;
+  }
+  .about_stay dt::before{left: 0px;}
+  .about_stay dt::after{right: 0px}
+  
+  .about_stay dd{
+    width: calc(120/375*100%);
+    display: inline-block;/*가로, 세로크기, 여백설정, 글자처럼 정렬도 가능*/
+    text-align: center;
+    
+  }
+  
+  .about_stay dd span{
+    display: block;
+    padding: 6px 0px;
+  }
+  
+  /* 갤러리 */
+  .gallery{
+    height: 600px;
+  }
+  .gallery-box{
+    width: 100%;
+    margin-left: 15px;
+  }
+  .gallery-list{
+    display: flex;
+    width: 1000px;
+  }
+  .gallery li{
+    margin-right: 25px;
+    /* width: 165px; */
+    height: calc(468/600*100%);
+  }
+  .gallery li img{
+    width:225px;
+  }
+  /* 푸드검색 */
+  .food{
+    background: #C7BBAF;
+    height: 750px;
+  }
+  .food_title{
+    padding-top: 6%;
+  }
+  .food-search{
+    display: flex;
+    position: relative;
+    width: 315px;
+    width: 100%;
+    height: calc(70/600*100%);
+  }
+  .food-search img{
+    width: calc(24/375*100%);
+    position: absolute;
+    z-index: 1;
+  }
+  .form-control {
+    background-image: url(../images/icon_search.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 20px,50px;
+    position: absolute;
+    transform: translate(50%,50%);
+    top:-30px; right: 50%;
+    text-indent: 50px;
+    height: 60px;
+    width: 315px;
+    font-weight: 800;
+    padding-left: 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #707070;
+    background-color: #ffffff;
+    border: 0px solid transparent;
+  }
+  /* 음식리스트 */
+  .food-box{
+    width: 100%;
+    margin-top: -10px;
+  }
+  .food-list{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 165px;
+    width: 768px;
+    justify-content: center;
+  }
+  .food-list li{
+    width: 255px;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+  .food-list li img {
+    width: 170px;
+  }
+  .f_title{
+    display: inline-block;
+    width: 180px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  /* 유튜브 */
+  .youtube{
+    height: 580px;
+  }
+  .player{
+    padding-top:56.25%;
+    position: relative;
+  }
+  .player iframe{
+    position: absolute;
+    transform: translate(0%,0%);
+    top:10%; left:0;
+    width:100%; height:100%;
+  }
+  
+    /* 인스타그램 */
+    .instar{
+      margin:0 auto;
+    }
+    .instar .con_title img{
+      width: calc(120/375*100%);
+    }
+    .instagram{
+      display: inline-block;
+      width: 100%;
+      margin-top:40px;
+    }
+    .instar .insta_img{
+      width: calc(170/375*100%);
+      float: left;
+      margin-left: 25%;
+      margin-top: -7%;
+    }
+    .insta_id{
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    .instar ul{
+      grid-template-columns:repeat(3, 1fr);
+    }
+    .instar ul li:nth-child(10),.instar ul li:nth-child(11),.instar ul li:nth-child(12){
+      display: none;
+  }
+  
+    /* 푸터영역 */
+    footer{
+      margin-top: 10px;
+      height: 250px;
+    }
+    .f_lnb{
+      position: relative;
+      display: inline-block;
+      left: 4%; top:10px;
+      justify-content: space-around;
+    }
+    .f_lnb li a{
+      color: #313030;
+      font-size: 0.875rem;
+      font-weight: 100;
+    }
+    .f_nav dt{
+      padding-left: calc(16/375*100%);
+    }
+    .f_nav dd{
+      width: 50%;
+    }
+    .f_nav dd a{
+      font-size: 0.76rem;
+    }
+    .f_nav dd span{
+      position: absolute;
+      right: 8%;
+      top:3%;
+      font-size: 0.6rem;
+    }
+    .f_info dl{
+      position: relative;
+      width: 100%;
+    }
+    .f_info > dl dd {
+      position: absolute;
+      top: 85px;
+      left: 3%;
+      line-height: 32px;
+  }
+    .f_info > dl > dd:nth-child(2){
+      position: absolute;
+      top: 90px;
+      left: 4%;
+      line-height: 32px;
+    }
+    .f_info > dl > dd:nth-child(3){
+      position: absolute;
+      top: 133px;
+      right: 10%;
+      line-height: 32px;
+    }
+    .f_info > dd {
+      width: 90%;
+      font-size: 1rem;
+      text-align: center;
+      justify-content: space-around;
+    }
+    .f_info > dl h3{
+      font-size: 0.84rem;
+    }
+    .f_info > dl .number{font-size: 1.3rem;}
+    .f_info > dl p{
+      font-size: 0.8rem;
+      width: 130px;
+    }
+    .sns{
+      position: absolute;
+      top: -10px;
+      left: 25%;
+    }
+    .sns a{
+      color:#313030;
+      font-size:20px;
+    }
+    .f_info > dd > dd{
+      font-size: 12px;
+    }
+    .siteurl{
+      position: absolute;
+      top: 170px;
+      left: 6%;
+      width: 80%;
+    }
+    .siteurl > label{display: none;}
+    
+    address{
+      width: 90%;
+      border-top:1px solid #313030;;
+      padding-top:14px;
+      margin-top:10px;
+      margin-left: 40px;
+      font-size:16px;
+      color:#ccc;
+      line-height:24px;
+      }
+      address > .a_info{
+          width:100%;
+          margin-right:60px;
+          /* padding:1%; */
+          float: left;
+          box-sizing:border-box;
+          /* font-size:0.8rem; */
+          color: #313030;
+      }
+      address > .a_pay{
+          display: none;
+      }
+      .list_app{
+        display: none;
+      }
+      aside{
+        display: none;
+      }
+      /* 예약버튼 */
+    .reservation{
+      position:relative;
+      top:-350px; right:-600px;
+      content: '';
+      z-index: 10;
+      width: 300px;
+      height: 230px;
+      /* background-color: #c466b7; */
+    }
+    .reservation > ul{
+      position: absolute;
+      width:300px;
+      /* right:360px; top:0PX; */
+
+    }
+    .reservation > ul >li{
+      background-color: rgba(51,51,51,0.9);
+      border:none;
+      color:#ffffff;
+      transition:0.5s;
+      text-indent:30px;
+      margin-bottom:10px;
+    }
+    .reservation > ul >li a{
+      color:#ffffff;
+      padding: 5px;
+      line-height:50px;
+      border-bottom: 1px solid #ffffff;
+    }
+    .reservation > ul >li:hover{
+      background-color:#736565;
+      color:#000000;
+    }
+    .reservation > ul >li:nth-child(4):hover{
+      background-color:#CF4747;
+      color:#000000;
+    }
+}
+
+

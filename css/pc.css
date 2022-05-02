@@ -1,0 +1,816 @@
+@charset "utf-8";
+
+/* pc서식 */
+header{
+  height:170px;
+}
+.header_top{
+  width:1200px;
+  margin:0px auto;
+  position:relative;
+}
+.header_top h1{
+  position:relative;
+  top:40px;
+  width:200px;
+}
+.header_top i.fa-solid.fa-user{
+  display: none;
+}
+.lan{
+  color:#ddd;
+  margin-top: -5px;
+  padding-left: 8px;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  font-size: 13px;
+  width:80px; height: 25px;
+  appearance: none; -webkit-appearance: none;
+  background: url(../images/bg_select.png) no-repeat right 12px center;
+}
+.lan option{color:#313030;}
+.lnb select::-ms-expand {opacity: 0;}
+
+.header_top h1 img{width:100%;}
+
+.lnb{
+  position:relative;
+  top: -50px;
+}
+.lnb > ul{
+  display:flex;
+  justify-content:flex-end;
+}
+.lnb > ul > li{
+  margin:0px 5px;
+}
+.lnb > ul > li > a{
+  color:#fff;
+  font-size:13px;
+}
+.lnb > ul > li > a:hover{
+  text-decoration:underline;
+  /* font-weight:bold; */
+}
+.lnb > ul > li:nth-child(4) > a{
+  display: none;
+}
+fieldset{
+  position:absolute;
+  right:-22px;top:65px;
+  border:none;
+}
+fieldset > legend{display:none;}
+#search{
+  width:250px;
+  height:30px;
+  border-radius:26px;
+  text-align:center;
+  border:none;
+}
+fieldset > label{
+  transform:translate(-36px, 4px);
+  /* position:absolute;
+  left:-36px;top:4px; */
+  font-size:22px;
+}
+fieldset > label > span{display:none;}
+
+/* gnb서식 */
+.header_bottom{
+  width:100%;
+  height:48px;
+  background-color:rgba(255,255,255,0.97);
+  position:absolute;
+  top:110px;
+  overflow:hidden;
+  transition:0.5s;
+  z-index:1000;
+}
+
+/* pc해상도영역에서만 마우스 오버 설정하기 */
+@media screen and (min-width:1025px) {
+  .header_bottom:hover{
+    height:400px;
+  }
+}
+
+
+.gnb{
+  background-color:#161616;
+  height:48px;
+}
+.gnb > ul{
+  width:1200px;
+  margin:0px auto;
+  display:flex;
+  justify-content:flex-end;
+}
+.gnb > ul > li{
+  line-height:48px;
+  
+}
+.gnb > ul > li > a{
+  font-size:16px;
+  font-weight:400;
+  color:#fff;
+  border-right:1px solid #ccc;
+  padding:0px 45px;
+}
+.gnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+.gnb > ul > li:last-child > a{
+  border:none;
+  padding-right:0px;
+}
+
+/* 서브메뉴 서식 */
+.sub{text-align:center;}
+.sub a{font-size:14px;}
+.sub a:hover{font-weight:bold;}
+
+/* 메인서식 */
+main{
+  clear:both;
+  overflow:hidden;
+}
+
+.slide{
+  height: 770px;
+}
+.slide > h2{display:none;}
+.slide img{
+  width:100%;
+  height:770px;
+}
+
+/*공통서식*/
+.content{
+  position: relative;
+  height: 600px;
+}
+.button{
+  position: absolute;
+  font-family: 'MaruBuri-Regular';
+  font-size: 8px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 5px 10px;
+  border: 1px solid #736565;
+  border-radius: 5px;
+  top:5px;
+  right: 470px;
+  transition: 0.5s;
+}
+.button:hover{
+  color: #fff;
+  background-color: #736565;
+  box-sizing: border-box;
+  width: fit-content;
+  display: block;
+  border: 2px solid #736565;
+}
+.con_title{
+  font-family: 'MaruBuri-Regular';
+  font-size: 1.750rem;
+  font-weight: 600;
+  margin: 5% auto;
+  text-align: center;
+}
+.no_title{
+  display: none;
+}
+/* 객실안내 */
+.room-infor{
+  height: 500px;
+}
+.r_infor{
+  position: relative;
+  height: 620px;
+  top:0px;
+}
+.r_infor .con_title{
+  margin: 6% auto;
+}
+.room_slide{
+  width: 100%;
+}
+.room{
+  width: 100%;
+}
+.room_picture{
+  display: flex;
+  margin-top: -60px;
+  margin-left: 30px;
+  justify-content: center;
+}
+.room_picture li{
+  margin-right: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.room_picture li img{
+  width: 300px;
+}
+.room_picture li img:hover{
+  transform: scale(1.1);
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.room_text{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.room_text li{
+  width: 330px;
+}
+.room_text li img{
+  width:315px;
+  cursor: pointer;
+}
+
+/* 아날로그 패키지 */
+.package{
+  height: 320px;
+  margin-top: 170px;
+}
+.packge-list{
+  /* width:100%; */
+  margin-left: 100px;
+  text-align: center;
+  /* margin: 0% auto; */
+  display: flex;
+  justify-content: center;
+}
+.packge-list li{
+  margin-right: 100px;
+  /* width: 44%; */
+  justify-content: space-around;
+}
+.packge-list li a{
+  justify-content: center;
+}
+.package .button{
+  right: 490px;
+}
+.icon{
+  background-image: url(../images/icon_packge.png);
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+.icon:hover{
+  transform: translate3d(0px, -10px, 0px);
+  transition: 0.2s;
+  animation-timing-function: linear;
+}
+li:nth-child(2) .icon{
+  background-position: -152px;
+}
+
+li:nth-child(3) .icon{
+  background-position: -313px;
+}
+
+li:last-child .icon{
+  background-position: -468px;
+}
+
+/* 패키지 공통서식 */
+.mn_title{
+  font-family: 'MaruBuri-Regular';
+  font-size: 0.938rem;
+  margin-bottom: 0.313rem;
+}
+.mn_infor{
+  /* font-family: 'MaruBuri-Regular'; */
+  font-size: 0.7rem;
+  line-height: 15px;
+}
+
+
+/* 서비스 영역 */
+.service> h2{
+  display: none;
+}
+
+/* 서비스 */
+#about{
+width:100%;
+margin-top: 70px;
+/* background: beige; */
+height:360px;
+}
+
+.about_inner{
+width:1200px;
+margin: 0px auto;
+display: flex;
+color:#333333;
+justify-content: center;
+
+}
+.about_txt{
+  width: 333px;
+  margin-top: 70px;
+  /* float: left; */
+/* width:100%;
+margin-top:3%;
+padding-bottom: 60px;
+text-align: center; */
+
+}
+.about_title{
+font-family: 'MaruBuri-Regular';
+font-size: 2.25rem;
+font-weight: 800;
+}
+.p01{
+font-size:24px;
+font-weight:lighter;
+line-height:26px;
+padding:1.25rem 0rem 1.25rem 0rem;
+}
+.p02{
+font-size:14px;
+line-height:24px;
+}
+
+.about_stay{
+width: 667px;
+/* float: left; */
+padding: 0px 0px 30px 0px;
+box-sizing: border-box;
+border-bottom: 1px solid #fff;
+}
+
+.about_stay dl{
+  margin-top: 30px;
+  height: 290px;
+  /* background: yellow; */
+  text-align: center;
+  border-bottom: 1px solid #333333;
+}
+
+.about_stay dt{
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+letter-spacing: 2px;
+position: relative;
+padding-bottom: 5px;
+}
+
+.about_stay dt::before, .about_stay dt::after{
+content: "";
+width: calc(30/375*100%); height: 1px;
+background-color: #333333;
+display: block;
+position: absolute; top: 12px;
+}
+.about_stay dt::before{left: 0px;}
+.about_stay dt::after{right: 0px}
+
+.about_stay dd{
+width: 165px;
+display: inline-block;/*가로, 세로크기, 여백설정, 글자처럼 정렬도 가능*/
+text-align: center;
+cursor: pointer;
+}
+.about_stay dd img{
+  width: 100px;
+}
+.about_stay dd span{
+display: block;
+padding: 6px 0px;
+}
+
+/* 갤러리 */
+.gallery{
+  height: 600px;
+  }
+  .gallery-box{
+  width: 100%;
+  margin-left: 25px;
+  }
+  .gallery-list{
+  display: flex;
+  width: 1200px;
+  margin: 0px auto;
+  justify-content: center;
+  }
+  .gallery li{
+  margin-right: 25px;
+  /* width: 165px; */
+  height: calc(468/600*100%);
+  }
+  .gallery li img{
+  width:225px;
+  cursor: pointer;
+  }
+
+/* 갤러리 마우스 오버 */
+.box-wrap {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center
+}
+.box {
+  position: relative;
+  /* width: 400px; height: 300px; */
+  /* border: 7px solid #283593; */
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4)
+}
+.box img {
+  width: 100%;
+}
+
+.box .info {
+  color: #fff;
+  position: absolute; left: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+  cursor: pointer;
+}
+.box:hover .info {
+  opacity: 1;
+}
+.box .info h3 {
+  font-family: 'MaruBuri-Regular';
+  font-size: 24px;
+  padding-bottom: 0.4em;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.box .info p {
+  /* font-family: 'MaruBuri-Regular'; */
+  font-size: 13px;
+  line-height: 20px;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  /* text-transform: uppercase; */
+}
+
+/* 푸드검색 */
+.food{
+  background: #C7BBAF;
+  height: 480px;
+}
+.food_title{
+  padding-top: 55px;
+}
+.food-search{
+  display: flex;
+  position: relative;
+  /* width: 315px; */
+  width: 100%;
+  /* height: calc(70/600*100%); */
+}
+.food-search img{
+  width: calc(24/375*100%);
+  position: absolute;
+  z-index: 1;
+}
+.form-control {
+  background-image: url(../images/icon_search.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: 20px,50px;
+  cursor: pointer;
+  position: absolute;
+  transform: translate(50%,50%);
+  top:-80px; right: 50%;
+  text-indent: 50px;
+  height: 60px;
+  width: 315px;
+  font-weight: 800;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #707070;
+  background-color: #ffffff;
+  border: 0px solid transparent;
+}
+
+/* 음식리스트 */
+.food-box{
+  width: 1200px;
+  margin: 50px auto;
+  /* overflow-x: scroll; */
+}
+.food-list{
+  display: flex;
+  margin-left: 50px;
+  width: 1370px;
+}
+.food-list li{
+  width: 150px;
+  margin-right: 50px;
+}
+
+.food-list li img {
+  width: 145px;
+  position: relative;
+}
+.food-list li img:hover{
+  top: 15px;
+  display: inline-block;
+  animation: bounce .3s ease infinite alternate;
+}
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+  }
+}
+
+.f_title{
+  display: inline-block;
+  width: 166px;
+  margin-left: 10px;
+  line-height: 25px;
+  /* text-indent: 50px; */
+  font-size:16px;
+}
+
+/* 유튜브 */
+.youtube{
+  height: 650px;
+  /* background: rebeccapurple; */
+}
+.player{
+  padding-top:56.25%;
+  position: relative;
+}
+.player iframe{
+  position: absolute;
+  transform: translate(50%,10%);
+  top:0%; left:0;
+  width:50%; height:50%;
+}
+
+/* 인스타그램 */
+
+.instar .con_title img{
+  width: calc(300/1200*100%);
+}
+.instagram{
+  display: inline-block;
+  width: 100%;
+  margin-top:-70px;
+}
+.instar .insta_img{
+  width: calc(380/1200*100%);
+  float: left;
+  margin-left: 32%;
+  margin-top: -6%;
+}
+
+.instar{
+  clear:both;
+  width:1200px;
+  margin: auto;
+}
+
+.instar > h2{
+  text-align:center;
+  font-size:24px;
+  font-weight:400;
+  /* margin-bottom:50px; */
+}
+.instar > h2 i.fab{padding-right:10px}
+.instar ul{
+  display:grid;
+  padding:10px;
+  grid-gap:10px;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(3, 240px);
+}
+.instar ul li{
+  overflow:hidden;
+  z-index: 1;
+}
+.instar ul img{
+  width:100%;
+  object-fit:cover;
+  transition:0.5s;
+  cursor: pointer;
+}
+.instar ul img:hover{
+  transform:scale(1.1);
+  opacity:0.9;
+}
+.instar .name{
+  font-size:12px;
+  display:block;
+  padding-top:5px;
+}
+
+
+/* footer서식 */
+footer{
+  clear:both;
+  overflow:hidden;
+  height:250px;
+}
+
+.f_top{
+  /* background-color:#989898; */
+  height:60px;
+}
+.f_nav, .f_info, address{
+  width:1200px;
+  margin:0px auto;
+}
+
+.f_lnb{
+  width:400px;
+  position: relative;
+  display: inline-block;
+  left: 1%;
+  top:10px;
+  justify-content: space-around;
+  /* display:flex; */
+  /* display:grid; */
+}
+.f_lnb > li{
+  /* float:left; */
+  display:inline;
+  /* display:inline-block; */
+  margin-right:30px;
+}
+.f_lnb > li > a{
+  line-height:60px;
+  font-weight:bold;
+  font-size: 14px;
+}
+.f_lnb > li > a:hover{
+  text-decoration:underline;
+}
+.f_nav dl{
+  width:500px;
+  float:right;
+  display:flex;
+  line-height:60px;
+  font-size:13px;
+  color:#ffffff;
+} 
+.f_nav dt{margin-right:16px;}
+.f_nav dd{
+  width:430px;
+}
+.f_nav dd span{float:right;}
+.f_nav dd a{
+  width:276px;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap; /* 다음줄로 넘기지 않음.*/
+  text-overflow:ellipsis; /* 생략기호 나오게 함. */
+  color:#fff;
+}
+
+.f_info{clear:both;}
+.f_info > dl{
+  display:flex;
+  justify-content: space-between;
+}
+.f_info > dl > dt{
+  display:none;
+}
+.f_info > dl > dd{
+  position: absolute;
+  font-size:18px;
+  color:#ccc;
+  line-height:46px;
+}
+.f_info > dl{
+  position: relative;
+}
+.f_info > dl dd{
+  position: absolute;
+  top: 85px;
+  left: 0%;
+  line-height: 32px;
+}
+.sns, .siteurl{
+  transform:translateY(50px);
+}
+.sns a{
+  color:#313030;
+  font-size:30px;
+  padding:0px 10px;
+}
+.sns span{display:none;}
+.siteurl select{
+  height:40px;
+  width:220px;
+  border-radius:6px;
+  font-size:16px;
+  color:#7e7d7d;
+}
+
+/* 푸터 주소영역 서식 */
+address{
+  border-top:1px solid #313030;
+  width: 1180px;
+  margin-left: 360px;
+  padding-top:10px;
+  margin-top:10px;
+  font-size:16px;
+  color:#313030;
+  line-height:24px;
+}
+address > .a_info{
+  float:left;
+  width:600px;
+  margin-right:60px;
+}
+
+.list_app{
+  display: none;
+}
+/*aside 버튼*/
+aside{
+  position:fixed;
+  right:80px; bottom:270px;
+  text-align:center;
+  z-index: 10;
+}
+aside > a{
+  display:inline-block;
+  width:70px;
+  height: 70px;
+  background-color:#736565;
+  text-decoration:none;
+  color:#ffffff;
+  font-size:18px;
+  line-height: 65px;
+  border-radius:50%;
+}
+aside > a:nth-child(2){
+  position: fixed;
+  right: 80px; bottom: 170px;
+}
+aside > a:nth-child(2) > img{
+  position: relative;
+  top:7px;
+  width: 50px;
+}
+aside > a:hover{
+  color: #fff;
+  background-color: #f26f61;
+  box-sizing: border-box;
+  display: block;
+  border: 2px solid #f26f61;}
+
+/* 예약버튼 */
+.reservation{
+  position:relative;
+  top:-420px; right:-1250px;
+  content: '';
+  z-index: 10;
+  width: 300px;
+  height: 230px;
+  /* background-color: #c466b7; */
+}
+.reservation > ul{
+  position: absolute;
+  width:300px;
+  /* right:360px; top:0PX; */
+
+}
+.reservation > ul >li{
+   background-color: rgba(51,51,51,0.9);
+   border:none;
+   color:#ffffff;
+   transition:0.5s;
+   text-indent:30px;
+   margin-bottom:10px;
+}
+.reservation > ul >li a{
+   color:#ffffff;
+   padding: 5px;
+   line-height:50px;
+   border-bottom: 1px solid #ffffff;
+}
+.reservation > ul >li:hover{
+   background-color:#736565;
+   color:#000000;
+}
+.reservation > ul >li:nth-child(4):hover{
+  background-color:#CF4747;
+  color:#000000;
+}

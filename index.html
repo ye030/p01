@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>북촌아날로그 반응형웹</title>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+
+  <!-- pc서식  -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+  <!-- 태블릿 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+
+  <!-- 모바일 서식 -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+  <!-- 스와이퍼 슬라이드 서식 -->
+  <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+  <!-- css3속성 사용시 공급업체 접두가 자동으로 붙여주는 스크립트 소스 -->
+  <script src="./script/prefixfree.min.js"></script>
+
+  <!-- 스와이퍼 슬라이드 스크립트 소스 -->
+  <script src="./script/swiper.js"></script>
+
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 헤더영역 시작 -->
+  <header>
+    <div class="header_top">
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo.png" alt="상단로고">
+        </a>
+      </h1>
+
+       <!-- 유저 아이콘 -->
+       <i class="fa-solid fa-user"></i>
+
+      <nav class="lnb">
+        <ul>
+          <li><a href="login.html" title="로그인">멤버쉽</a></li>
+          <li><a href="join.html" title="회원가입">예약조회</a></li>
+          <li><a href="order.html" title="예약조회">로그인</a></li>
+          <li><a href="mypage.html" title="마이페이지">마이페이지</a></li>
+          <li><select class="lan">
+            <option>한국어</option>
+            <option>English</option>
+            <option>日本語</option>
+            <option>中文(简体字)</option>
+            <option>русский</option>
+            <option>TiếngViệt</option>
+            <option> Myanmar</option>
+           </select></li>
+        </ul> 
+      </nav>
+
+      <fieldset>
+        <legend>검색</legend>
+        <input type="search" id="search" placeholder="이달의 프로모션">
+        <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+      </fieldset>
+    </div>
+
+    <label for="toggle" class="fas fa-bars"></label>
+
+    <div class="header_bottom">
+      <label for="toggle" class="fas fa-times"></label>
+
+      <nav class="gnb">
+        <ul>
+          <li><a href="#" title="PROLOGUE">PROLOGUE</a>
+            <ul class="sub">
+                <li><a href="#" title="인삿말">인삿말</a></li>
+                <li><a href="#" title="오시는길">오시는길</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="ROOM">ROOM</a>
+            <ul class="sub">
+                <li><a href="#" title="온화">온화</a></li>
+                <li><a href="#" title="서정">서정</a></li>
+                <li><a href="#" title="사랑">사랑</a></li>
+            </ul>
+          </li>
+
+        <li><a href="#" title="FACILITY">FACILITY</a>
+            <ul class="sub">
+                <li><a href="#" title="스파">스파</a></li>
+                <li><a href="#" title="스팀사우나">스팀사우나</a></li>
+                <li><a href="#" title="마당">마당</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="SERVICE">SERVICE</a>
+            <ul class="sub">
+                <li><a href="#" title="와이파이">와이파이</a></li>
+                <li><a href="#" title="조식서비스">조식서비스</a></li>
+                <li><a href="#" title="턴테이블">턴테이블</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="TOUR">TOUR</a>
+            <ul class="sub">
+                <li><a href="#" title="관광지">관광지</a></li>
+                <li><a href="#" title="맛집">맛집</a></li>
+                <li><a href="#" title="포토존">포토존</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="RESERVE">RESERVE</a>
+            <ul class="sub">
+                <li><a href="#" title="예약안내">예약안내</a></li>
+                <li><a href="#" title="예약현황">예약현황</a></li>
+                <li><a href="#" title="실시간예약">실시간예약</a></li>
+            </ul>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- 콘텐츠영역 시작 -->
+  <main>
+    <article class="slide">
+      <h2>메인슬라이드</h2>
+      <div class="swiper-container main_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/main_slide.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main_slide02.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main_slide03.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main_slide00.jpg" alt=""></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+        
+      <div class="reservation">
+        <ul>
+            <li class="bth04"><a href="#" title="방선택하기">방을 선택해주세요.</a></li>
+            <li class="bth04"><a href="#" title="날짜 선택하기">날짜를 선택해주세요.</a></li>
+            <li class="bth04"><a href="#" title="인원 선택하기">인원을 입력해주세요.</a></li>
+            <li class="bth04"><a href="#" title="예약 페이지로 이동">예약하기</a></li>
+        </ul>
+      </div>
+
+    </article>
+
+   
+    <!-- 객실안내 -->
+    <article class="content room-infor">
+      <div class="r_infor">
+        <h2 class="con_title">객실안내</h2>
+        <a href="#" title="더보기" class="button">&rarr; &nbsp; More</a>
+          <div class="room_slide">
+            <ul class="room">
+              <li>
+                <ul class="room_picture">
+                  <li><img src="./images/room1.jpg" alt="온화 객실풍경"></li>
+                  <li><img src="./images/room2.jpg" alt="서정 객실풍경"></li>
+                  <li><img src="./images/room3.jpg" alt="사랑 객실풍경"></li>
+                </ul>
+                <ul class="room_text">
+                  <li><img src="./images/room_text01.png" alt=""></li>
+                  <li><img src="./images/room_text02.png" alt=""></li>
+                  <li><img src="./images/room_text03.png" alt=""></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </article>
+
+    <!-- 아날로그 패키지 -->
+    <article class="content package">
+      <h2 class="con_title">아날로그 패키지</h2>
+      <a href="#" title="더보기" class="button">&rarr; &nbsp; More</a>
+
+      <ul class="packge-list">
+        <li><a href="#" title="오셜록 패키지">
+          <span class="icon">&nbsp;</span>
+          <p class="mn_title">[아날로그 X 오셜록]</p>
+          <span class="mn_infor">오셜록 프리미엄티와 함께<br>
+            즐기는 가을의 정취</span></a>
+        </li>
+
+        <li><a href="#" title="릴렉스 패키지">
+          <span class="icon">&nbsp;</span>
+          <p class="mn_title">[RELAX 54 패키지]</p>
+          <span class="mn_infor">이른 체크인과 늦은 체크아웃.<br>
+            54시간의 여유로운 스테이</span></a>
+        </li>
+
+        <li><a href="#" title="실버 패키지">
+          <span class="icon">&nbsp;</span>
+          <p class="mn_title">[SILVER PACKAGE]</p>
+          <span class="mn_infor">답답한 일상에 지친 부모님께<br>
+          해외 여행을 대신할 깜짝 선물</span></a>
+        </li>
+
+        <li><a href="#" title="LUSH 패키지">
+          <span class="icon">&nbsp;</span>
+          <p class="mn_title">[아날로그 한옥 X LUSH]</p>
+          <span class="mn_infor">일상의 근심 걱정은 잠시 잊고,<br>
+          아날로그 한옥에서 편안함을.</span></a>
+        </li>
+      </ul>
+      </article>
+
+    <!-- 서비스 -->
+    <section id="about">
+      <h2 class="no_title">서비스01</h2>
+      <div class="about_inner">
+          <article class="about_txt">
+              <h2 class="about_title">아날로그 한옥</h2>
+              <p class="p01">Only Analog Hanok<br>
+                Comfort and Relaxation.</p>
+              <P class="p02">
+                바쁜 일상 속 아날로그 한옥에서 잠시나마<br>
+                근심 걱정을 내려놓고 여유를 즐겨보세요.<br>
+                도심에서 느끼는 한옥의 전통과 멋 그리고<br>
+                프라이빗한 스파를 통해 힐링하고 가세요.
+          </article>
+
+          <article class="about_stay">
+            <h2 class="no_title">서비스02</h2>
+              <dl>
+                <dt>WHY STAY WITH ANALOG?</dt>
+                
+                    <dd>
+                        <img src="./images/icon_tea.png" alt="TEA">
+                        <span>WELCOME TEA</span>
+                    </dd>
+                    <dd>
+                        <img src="./images/icon_wifi.png" alt="WIFI">
+                        <span>FREE WI-FI</span>
+                    </dd>
+                    <dd>
+                        <img src="./images/icon_jacu.png" alt="SPA">
+                        <span>PREMIUM SPA</span>
+                    </dd>
+                    <dd>
+                        <img src="./images/icon_dry.png" alt="DRYER">
+                        <span>DRYER</span>
+                    </dd>
+                    <dd>
+                        <img src="./images/icon_pool.png" alt="POOL">
+                        <span>POOL</span>
+                    </dd>
+                    <dd>
+                      <img src="./images/icon_yard01.png" alt="YARD">
+                      <span>YARD</span>
+                  </dd>
+              </dl>
+          </article>
+      </div>
+  </section>
+
+  <!-- 갤러리 -->
+  <article class="content gallery">
+    <h2 class="con_title">아날로그 전경</h2>
+
+    <div class="gallery-box">
+      <ul class="gallery-list">
+        <li>
+          <div class="box-wrap">
+            <div class="box">
+              <div class="img">       
+                <img src="./images/gallery_01.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>Traditional</h3>
+                <p>전통의 미학과 편안함이<br>
+                  공존하는 도심형근대한옥</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="box-wrap">
+            <div class="box">
+              <div class="img">       
+                <img src="./images/gallery_02.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>Delicious</h3>
+                <p>임금님 수랏상 저리가라!<br>
+                남 부럽지 않은 아날로그 조식</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="box-wrap">
+            <div class="box">
+              <div class="img">       
+                <img src="./images/gallery_03.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>Peaceful</h3>
+                <p>프라이빗 스파와 습식 사우나
+                  <br>캡슐 커피와 허브티까지 함께해요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="box-wrap">
+            <div class="box">
+              <div class="img">       
+                <img src="./images/gallery_04.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>Cozy</h3>
+                <p>내 집 같은 편안함<br>
+                  아날로그 한옥만의 아늑함
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </article>
+
+  <!-- 맛집검색 -->
+  <article class="content food">
+    <h2 class="con_title food_title">북촌에서 뭐 먹지?</h2>
+    <div class="food-search">
+      <input class="form-control" name="text" placeholder="가까운 맛집을 찾아보세요." onfocus="this.placeholder='" onblur="this.placeholder='가까운 맛집을 찾아보세요.'">
+    </div>
+
+      <div class="food-box">
+        <ul class="food-list">
+          <li>
+              <a href="https://100samgyetang.modoo.at/" title="백년토종삼계탕 홈페이지 바로가기">
+                  <img src="./images/icon_soup.png" alt="백년토종삼계탕">
+                  <span class="f_title">#백년토종삼계탕<br>
+                  #Meat #Chichen_soup</span>
+
+              </a>
+          </li>
+          <li>
+              <a href="http://naver.me/GZAjAwQM" title="편안한집 홈페이지 바로가기">
+                  <img src="./images/icon_korean_food.png" alt="편안한집">
+                  <span class="f_title">#편안한집<br>
+                      #Original_Korean</span>
+              </a>
+          </li>
+          <li>
+              <a href="http://naver.me/FyexdBKx" title="밀과보리 홈페이지 바로가기">
+                  <img src="images/icon_veg.png" alt="밀과보리">
+                  <span class="f_title">#밀과보리<br>
+                      #For_Vegetarian</span>
+              </a>
+          </li>
+          <li>
+              <a href="http://www.mongjungheon.co.kr/" title="몽중헌 홈페이지 바로가기">
+                  <img src="images/icon_chinese.png" alt="몽중헌">
+                  <span class="f_title">#몽중헌<br>
+                      #Chinese</span>
+              </a>
+          </li>
+          <li>
+              <a href="http://naver.me/5RctoAyx" title="대장장이화덕피자 홈페이지 바로가기">
+                  <img src="images/icon_pizza.png" alt="대장장이화덕피자">
+                  <span class="f_title">#대장장이화덕피자<br>
+                      #Italian</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.instagram.com/tigercurry_bukchon/" title="호랑이카레 홈페이지 바로가기">
+                  <img src="images/icon_curry.png" alt="호랑이카레">
+                  <span class="f_title">#호랑이카레<br>
+                      #Japanese</span>
+              </a>
+          </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 유튜브 -->
+    <article class="youtube">
+      <h2 class="no_title">유튜브</h2>
+      <div class="player">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wSmk6cijFho" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </article>
+
+
+    <!-- 인스타그램 -->
+    <article class="instar">
+      <div class="instagram">
+        <h2 class="con_title">&nbsp;<img src="./images/instagram_txt.png" alt=""></h2>
+        <img class="insta_img" src="./images/instagram_id.png" alt="">
+      </div>
+      
+      <ul>
+        <li><img src="./images/insta_01.jpg" alt=""></li>
+        <li><img src="./images/insta_17.jpg" alt=""></li>
+        <li><img src="./images/insta_02.jpg" alt=""></li>
+        <li><img src="./images/insta_06.jpg" alt=""></li>
+        <li><img src="./images/insta_11.jpg" alt=""></li>
+        <li><img src="./images/insta_08.jpg" alt=""></li>
+        <li><img src="./images/insta_03.jpg" alt=""></li>
+        <li><img src="./images/insta_14.jpg" alt=""></li>
+        <li><img src="./images/insta_05.jpg" alt=""></li>
+        <li><img src="./images/insta_24.jpg" alt=""></li>
+        <li><img src="./images/insta06.jpg" alt=""></li>
+        <li><img src="./images/insta_18.jpg" alt=""></li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- 푸터영역 시작 -->
+  <footer>
+    <div class="f_top">
+      <nav class="f_nav">
+        <ul class="f_lnb">
+          <li><a href="#" title="회사 소개">회사 소개</a></li>
+          <li><a href="#" title="개인 정보 정책">개인 정보 정책</a></li>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="지도">지도</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="f_info">
+      <dl>
+        <dt class="no_title">&nbsp;</dt>
+        <dd class="sns">
+          <a href="#" title="인스타" class="fab fa-instagram"><span>인스타그램</span></a>
+          <a href="#" title="페이스북" class="fab fa-facebook-f"><span>페이스북</span></a>
+          <a href="#" title="트위터" class="fab fa-twitter"><span>트위터</span></a>
+          <a href="#" title="페이스북" class="fab fa-youtube"><span>유튜브</span></a>
+        </dd>
+      </dl>
+    </div>
+    <address>
+      <p class="a_info">
+        아날로그한옥 (주) 대표이사 : 조한준
+        <br>사업자등록번호 : 123-45-67890 서울 종로구 계동길 70-24
+        <br>이메일 : analoghanok@naver.com <br>
+        &copy;Analoghanok. All Rights Reserved.</p>
+
+    </address>
+    <ul class="list_app">
+      <li>
+        <a href="#">
+          <img src="./images/icon_app01.svg" alt="">
+          <p>GOOGLE PLAY</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/icon_app02.svg" alt="">
+          <p>APP STORE</p>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <aside>
+    <a href="#" title="top 버튼">TOP</a>
+    <a href="#" title="예약 버튼">
+      <img src="./images/icon_calendar.png" alt="예약버튼">
+    </a>
+  </aside>
+
+  <script>
+    var swiper = new Swiper(".main_slide", {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      
+      function siteUrl(a){    //사용자가 select태그에서 option을 선택하면 값을 전달받는다.
+      if(a.value!='none'){ //만약에 사용자가 선택목록을 선택하였을 때문 아래 내용을 실행한다.
+        window.open(a.value, '_self'); //사이트 연결을 실행한다.
+        a.value='none'; //값을 초기화한다.
+      }else{            // 그렇지 않으면
+        return;         //실행하지 않는다.
+      }
+    }
+  </script>
+
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          0: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+  </script>
+
+
+</body>
+</html>
